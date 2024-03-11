@@ -21,6 +21,10 @@
 							"pm.test(\"Response contains params\", function () {",
 							"    let data = pm.response.json();",
 							"    pm.expect(data.args.lol).to.eql(\"true\");",
+							"});",
+							"",
+							"pm.test(\"Test if environment variable exists\", () => {",
+							"    pm.expect(pm.environment.get('testVariable')).to.eql('asdasdasd')",
 							"});"
 						],
 						"type": "text/javascript"
